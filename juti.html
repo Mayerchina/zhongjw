@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/juti.css"/>
+	</head>
+	<body>
+		<header></header>
+		<section id="main">
+			<script type="text/html" id="titles" charset="utf-8">
+			<div class="margin">
+				<div id="title">
+					<a href="">全部</a>&nbsp;&gt;&nbsp;
+					
+					<a href="">{{lei}}</a>&nbsp;&gt;&nbsp;
+					<a href="">{{title}}</a>
+					
+				</div>
+				<div class="ztl">
+					<div class="zhong">
+						<img src="{{img1url[0]}}"/>
+						<div class="jing"></div>
+					</div>
+					<div class="da">
+						<div class="imgb">
+							<img src="{{img1url[0]}}">
+						</div>
+					</div>
+					<div class="xiao">
+						<ul class="min clear">
+							{{each img1url as item}}
+							<li><img src="{{item}}"/></li>
+							{{/each}}
+						</ul>
+					</div>
+					
+					<p class='a'>
+						<a href="" class="iconfont">&#xe618;收藏商品</a>
+						<span>
+							<i>分享到：</i>
+							<a href=""><img src="images/te/weibo2.png"/></a>
+							<a href=""><img src="images/te/qq2.png"/></a>
+							<a href=""><img src="images/te/weixin2.png"/></a>							
+						</span>
+					</p>
+					
+					
+					
+					
+				</div>
+				<div id="zt">
+					<h3>{{title}}</h3>
+					<h4>酱香美酒，傲世群雄</h4>
+					<p class="p">价格<span>{{jiage}}</span></p>
+					<div class="zt1">
+						销量<b>{{chengjiao}}</b><span>|</span>
+						评价<b>2036</b><span>|</span>
+						评分<b>{{gold}}</b>
+					</div>
+					<ul class="sell">
+						<li>促销&nbsp;&nbsp;<div>
+							<p><i>满免</i>单笔订单满<b>99.00</b>元免运费</p>
+							<p><i>红包</i>满<b>99元</b>送红包</p>
+						</div></li>
+						<li>库存&nbsp;&nbsp;<span>有货</span></li>
+						<li>物流&nbsp;&nbsp;<span>配送至<select>
+							<option value="">上海 上海市</option>
+						</select>&nbsp;|支持货到付款</span></li>
+						<li>服务&nbsp;&nbsp;<span>由<a href="">中酒自营</a>从北京发货，并提供售后服务</span></li>
+					</ul>
+					<div class="sum">数量&nbsp;&nbsp;
+						<a href="javascript:" class="jian">-</a>
+						<input type="text" id="num" value="1" />
+						<a href="javascript:" class="jia">+</a>
+					</div>
+					<div class="do">
+						<a href="" class="iconfont mai1">&#xe607;&nbsp;&nbsp;&nbsp;立即购买</a>
+						<a class="iconfont cart1">&#xe605;&nbsp;&nbsp;&nbsp;加入购物车</a>
+					</div>
+				</div>
+				<div class="ztr">
+					<div class="img"><a href=""><img src="images/te/t1.jpg"/></a></div>
+					<div class="img2"><b>自营</b><a href="">中酒自营店</a></div>
+					<div class="iconfont border1">&#xe608;</div>
+					<div class="img3">服务支持</div>
+					<div class="img4"><img src="images/te/t2.png"/>及时发货</div>
+				</div>
+			</div>
+			</script>
+		</section>
+		<footer></footer>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/template.js"></script>
+		<script>		
+			$("header").load("shangbu.html");
+			$("footer").load("xiabu.html");
+			$.get("shuju/zhuye1.json",function(data){
+				var number=location.search.substr(1);				
+				var data=data.zlist1[number];
+				var html=template("titles",data);
+				$("#main").append(html);
+				main();
+				
+				
+				
+				
+
+				
+				
+				
+				
+				
+		/*	var str = getCookie("cart");
+			var obj = str ? JSON.parse(str) : {};//用来存商品ID（attr）和添加的数量（value）
+				console.log(obj);
+			
+			for(var i in obj){ //for in 循环遍历     遍历数组  i 表示索引       遍历对象 i 表示对象属性
+				sum+=obj[i]; //obj[i]在这里表示的是存在cookie中的单个商品数量
+					
+			}
+			
+			$("#aside .di i").html(sum);
+			$("#top .tr .te2 b").html(sum);*/
+			
+			$(".cart1").click(function(){
+				var oshuliang=document.getElementById("num");	
+				obj[number] = obj[number] ? obj[number]+parseInt(oshuliang.value) :parseInt(oshuliang.value);
+				
+				//存cookie
+				
+				var objToStr = JSON.stringify(obj);
+				
+				setCookie("cart",objToStr,7);
+				sum+=parseInt(oshuliang.value);
+				$("#aside .di i").html(sum);
+				$("#top .tr .te2 b").html(sum);//在已获取的商品数量的基础上进行递增
+			})
+
+				
+				
+			
+			
+				
+				
+				
+				
+				
+				
+			});
+			
+		</script>
+		<script src="js/juti.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

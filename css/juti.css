@@ -1,0 +1,163 @@
+.margin {
+  width: 1190px;
+  margin: 0 auto; }
+
+#main {
+  background: #f5f5f5;
+  height: 601px; }
+  #main .margin {
+    background: #fff;
+    height: 100%; }
+    #main .margin #title {
+      height: 22px;
+      padding: 12px 0px 12px 20px;
+      font: 14px/22px "";
+      margin-bottom: 5px; }
+    #main .margin .ztl {
+      float: left;
+      margin-left: 20px;
+      width: 352px;
+      position: relative; }
+      #main .margin .ztl .zhong {
+        height: 350px;
+        width: 350px;
+        position: relative; }
+        #main .margin .ztl .zhong img {
+          border: 1px solid #ccc; }
+        #main .margin .ztl .zhong .jing {
+          display: none;
+          position: absolute;
+          width: 120px;
+          height: 120px;
+          background: #C2C3C4;
+          opacity: .5; }
+      #main .margin .ztl .da {
+        width: 350px;
+        height: 350px;
+        position: absolute;
+        left: 370px;
+        border: 1px solid #ccc;
+        top: 0px;
+        overflow: hidden;
+        background: #fff;
+        display: none; }
+        #main .margin .ztl .da img {
+          width: 800px;
+          height: 800px;
+          position: absolute; }
+      #main .margin .ztl .xiao .min {
+        padding-top: 20px; }
+        #main .margin .ztl .xiao .min li {
+          float: left;
+          margin-right: 15px; }
+          #main .margin .ztl .xiao .min li img {
+            width: 52px;
+            height: 52px;
+            border: 1px solid #ccc; }
+      #main .margin .ztl .a {
+        margin-top: 26px;
+        font: 400 12px/18px ""; }
+        #main .margin .ztl .a a {
+          height: 18px;
+          float: left;
+          margin: 0 2px; }
+        #main .margin .ztl .a span {
+          float: right; }
+        #main .margin .ztl .a img {
+          height: 18px;
+          width: 18px; }
+        #main .margin .ztl .a i {
+          float: left; }
+    #main .margin #zt {
+      float: left;
+      padding-left: 50px;
+      width: 492px;
+      margin-right: 45px; }
+      #main .margin #zt h3 {
+        font: 18px/27px ""; }
+      #main .margin #zt h4 {
+        font: 12px/21px "";
+        color: #ff0000; }
+      #main .margin #zt .p {
+        padding-left: 17px;
+        height: 56px;
+        background: #eeeff3;
+        font: 16px/56px ""; }
+        #main .margin #zt .p span {
+          color: #f00;
+          font: 20px/56px "";
+          padding: 5px 20px 5px 17px;
+          border-right: 1px dashed #a49e9e; }
+      #main .margin #zt .sell {
+        border-top: 1px dashed #a49e9e;
+        border-bottom: 1px dashed #a49e9e;
+        font-size: 12px; }
+        #main .margin #zt .sell li {
+          margin-bottom: 22px; }
+          #main .margin #zt .sell li div {
+            display: inline-block; }
+            #main .margin #zt .sell li div p {
+              margin: 10px 0; }
+              #main .margin #zt .sell li div p i {
+                background: #ed2700;
+                padding: 4px 10px;
+                margin-right: 20px; }
+      #main .margin #zt .sum {
+        padding-top: 20px; }
+        #main .margin #zt .sum input {
+          text-align: center;
+          height: 26px;
+          width: 36px; }
+        #main .margin #zt .sum a {
+          border: 1px solid #c2c3c4;
+          padding: 5px 10px; }
+      #main .margin #zt .do {
+        margin-top: 20px;
+        text-align: center; }
+        #main .margin #zt .do a {
+          display: inline-block;
+          height: 48px;
+          width: 180px;
+          background: #FF4D50;
+          color: #FFF;
+          font: 20px/48px "";
+          border-radius: 5px; }
+      #main .margin #zt .zt1 {
+        text-align: center;
+        font: 13px/45px ""; }
+        #main .margin #zt .zt1 span {
+          font-size: 21px;
+          color: #a49e9e;
+          margin: 0 24px 0 29px; }
+        #main .margin #zt .zt1 b {
+          color: #e3393c;
+          margin-left: 12px; }
+    #main .margin .ztr {
+      float: left;
+      border-top: 2px solid #ff4d50;
+      width: 216px; }
+      #main .margin .ztr div {
+        padding-left: 15px; }
+      #main .margin .ztr .img {
+        text-align: center;
+        border-bottom: 1px solid #ccc8c8; }
+      #main .margin .ztr .img2 {
+        height: 26px;
+        padding: 15px 0; }
+        #main .margin .ztr .img2 b {
+          color: #fff;
+          background: #ff4d50;
+          padding: 7px;
+          margin: 0 15px; }
+        #main .margin .ztr .img2 a:hover {
+          color: red; }
+      #main .margin .ztr .border1 {
+        font: 16px/36px "";
+        border-top: 1px dashed #ccc8c8;
+        border-bottom: 1px dashed #ccc8c8; }
+      #main .margin .ztr .img3 {
+        font: 16px/36px ""; }
+      #main .margin .ztr .img4 {
+        font: 12px/22px ""; }
+
+/*# sourceMappingURL=juti.css.map */

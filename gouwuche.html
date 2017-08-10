@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车结算</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/gouwuche.css"/>
+	</head>
+	<body>
+		<section id="top">
+			<div class="margin">
+				<span class="tl">您好，欢迎来到<em>中酒网！</em><a href="">去买家中心</a></span>
+				<div class="tm">
+					<a href="denglu.html">请登录</a><span>|</span>
+					<a href="zhuce.html">免费注册</a>
+				</div>
+				<ul class="tr">
+					<li><a href="">我的中酒网<i></i></a><div class="first"><a href="">已买到的商品</a><br/><a href="">我关注的商品</a><br/><a href="">我关注的店铺</a></div></li>
+					<li class="te2"><a target="_blank" href="">购物车<b>0</b>件</a></li>
+					<li><a href="">微信端</a><div><img src="images/banner/t4.png"/></div></li>
+					<li><a href="">APP</a><div><img src="images/banner/t5.png"/></div></li>
+					<li><a href="">卖家中心<i></i></a><div  class="first"><a href="">商家入驻</a><br/><a href="">已卖出商品</a><br/><a href="">管理商品</a></div></li>
+					<li class="te3"><a href="">网站导航<i></i></a><div>
+						<ul>
+							<li>
+								<h3>买酒</h3>
+								<a href="">白酒</a><a href="">葡萄酒</a><a href="">洋酒</a>
+								<a href="">黄酒</a><a href="">整箱</a><a href="">婚庆</a>
+							</li>
+							<li class="te4">
+								<h3>品牌</h3>
+								<a href="">茅台</a><a href="">五粮液</a><a href="">洋河</a>
+								<a href="">天佑德</a><a href="">红星</a><a href="">牛栏山</a>
+								<a href="">泸州老窖</a><a href="">拉菲</a><a href="">张裕</a>
+							</li>
+							<li>
+								<h3>其他</h3>
+								<a href="">帮助中心</a><a href="">品牌资讯</a><a href="">品牌导航</a>
+								<a href="">新品推荐</a><a href="">积分商城</a><a href="">APP下载</a>
+							</li>
+							<li class="te4">订购热线：400-798-9999</li>
+						</ul>
+					</div></li>
+					<li>订购热线：400-798-999</li>
+				</ul>
+			</div>
+		</section>
+		<header class="margin">
+			<a href="index.html"><img src="images/header/logo.png"/></a>
+			<h3>我的购物车</h3>
+			<ul>
+				<li class="liang1">1.我的购物车</li>
+				<li>2.填写核对订单信息</li>
+				<li>3.成功提交订单</li>
+			</ul>
+		</header>
+		<section id="main" class="margin">
+			<div class="dt">
+				<div class="dt1">
+					<input type="checkbox"  value=""  class="qx" checked="checked"/>
+					<label>全选</label>
+				</div>
+				<div class="dt2">商品</div>
+				<div class="dt3">商城价</div>
+				<div class="dt4">数量</div>
+				<div class="dt5">操作</div>
+			</div>
+			<dl id="xunhuan">
+				<dt><input type="checkbox"  value=""  class="qx" checked="checked"/>
+					<label>中酒自营</label></dt>
+				<script type="text/html" id="xunhuans">
+				{{each lis as value i}}
+				<dd class="dongxi">
+					<input type="checkbox"  class="xuan xuan1" checked="checked"/>
+					<img src="{{value.img1url[0]}}"/>
+					<span>
+						<b>{{value.title}}</b>
+						<i>商品货号：{{value.productId}}</i>
+					</span>
+					<i class="jiage">{{value.jiage}}</i>
+					<b class="do1">
+						<a href="javascript:" class="jian">-</a>
+						<input type="text" class="num1" value="1" />
+						<a href="javascript:" class="jia">+</a>
+					</b>
+					<em class="em1">删除</em>
+				</dd>
+				{{/each}}				
+				</script>	
+			</dl>
+			<div class="db">
+				<input type="checkbox" value=""   class="qx" checked="checked"/>
+				<label>全选</label>
+				<a href="" class="dele">删除</a><em>0</em><i>件商品</i>
+				<b>总计（不含运费）：</b><span>￥0.00</span>
+				<a href="" class="over">去结算</a>
+			</div>
+		</section>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/gouwuche.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/template.js" type="text/javascript" charset="utf-8"></script>		
+	</body>
+</html>

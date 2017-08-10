@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/xiangqing.css"/>
+	</head>
+	<body>
+		<header></header>
+		<section id="main" class="margin clear">
+			<div id="mtt"> 
+				<div id="mtop">
+					<a href="../index/index.html">首页&gt;</a>
+					<a href="../index/index.html">全部&gt;</a>
+					<script type="text/html" id="mtops">
+						<a href="">{{lei}}<span>&nbsp;X</span></a>					
+					</script>
+				</div>
+				<p id="mtopr" >共<span>355</span>个商品</p>
+			</div>
+			<div id="xb">
+				<div class="mleft">
+					<dl>所有类目
+						<dt class="iconfont">&#xe61f;&nbsp;<a href="">酒类</a></dt>
+						<dd><a href="">白酒</a></dd>
+					</dl>
+					<div>
+						<h3>热卖单品</h3>
+						<ul id="rm">
+							<script type="text/html" id="rms">
+								{{each productjson as value i}}
+								{{if value.chengjiao>3000}}
+									<li>
+										<img src="{{value.img1url}}"/>
+										<span>{{value.jiage}}&nbsp;&nbsp;&nbsp;成交<b>{{value.chengjiao}}</b>笔</span>
+										<p>{{value.title}}</p>										
+									</li>
+								{{/if}}
+								{{/each}}
+							</script>
+							
+						</ul>
+					</div>
+				</div>
+				<div class="mright">
+					<div class="mrt"></div>
+					<p>
+						<a href="">默认</a>
+						<a href="">成交量</a>
+						<a href="">价格</a>
+						<a href="">评论数</a>
+						<a href="">上架时间</a>
+					</p>
+					<ul id="xq">
+						<script id="xqs" type="text/html">
+							{{each productjson as value i}}
+							<li>
+								<img src="{{value.img1url}}"/>
+								<span>{{value.jiage}}&nbsp;&nbsp;&nbsp;成交<b>{{value.chengjiao}}</b>笔</span>
+								<p>{{value.title}}</p>
+								<i>加入购物车</i>
+							</li>
+							{{/each}}
+						</script>	
+					</ul>
+					<h4>品牌资讯</h4>
+					<ul id="t11">
+						<li><a href="">战火市场占有率第一</a></li>
+						<li><a href="">如何相应首歌中国品牌日</a></li>
+						<li><a href="">战火市场占有率第一</a></li>
+						<li><a href="">战火市场占有率第一</a></li>
+						<li><a href="">战火市场占有率第一</a></li>
+						<li><a href="">战火市场占有率第一</a></li>
+						<li><a href="">战火市场占有率第一</a></li>
+						<li><a href="">战火市场占有率第一</a></li>
+					</ul>
+					<div id="ye">
+						<a href="">上一页</a>
+						<a href="" class="hover">1</a>
+						<a href="">2</a>
+						<a href="">3</a>
+						<a href="">4</a>
+						<a href="">5</a>
+						<a href="">6</a>
+						<a href="">下一页</a>
+						<span>
+							<em>&nbsp;&nbsp;共</em>
+							<em>6</em>
+							<em>页&nbsp;&nbsp;&nbsp;到第</em>
+							<input type="text"  id="jumpinout" value="1" />
+							<em>页</em>
+							<a href="">确定</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer></footer>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/template.js"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			$("header").load("shangbu.html");
+			$("footer").load("xiabu.html");
+			$.get("shuju/jiu.json",function(data){
+				//var number=location.search.substr(1);
+				var data1=data.productjson[1001];
+				var html=template("mtops",data1);
+				$("#mtop").append(html);
+				var html2=template("rms",data);
+				
+				$("#rm").append(html2);
+																	
+				var html1=template("xqs",data);		
+				$("#xq").append(html1);
+				
+			})
+		</script>
+	</body>
+</html>
